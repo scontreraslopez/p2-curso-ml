@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Predicciones CO2</title>
+    <!-- Enlace a la hoja de estilo de Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlace a las fuentes de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+</head>
+</head>
+<body>
+    <!-- Website Title -->
+    <div class="container-fluid" style="background-color: black; color: white; padding: 20px; text-align: center;">
+        <h2 class='container-heading'><span class='heading_first'>
+            <i class="fas fa-car"></i>
+            Predictor de emisiones de CO2:</span>
+            <div class='description'>
+                <p style="font-size: 20px;">A Machine Learning Web App, Built with Flask.</p>
+            </div>
+    </div>
+
+    <div style="text-align: center;">
+        <h4 style='color:black'>{{ val }}</h4>
+    </div>
+
+    <!-- Prediction Area -->
+    <div class="prediction-area" style='margin-top: 45px; text-align: center;'>
+    <!-- Prediction Form -->
+        <div class='div2' style='display: inline-block; text-align: left;'>
+            Introduce datos para predecir la emisión de CO2:
+            <form action="predict" method="POST">
+                <input class="form-input" type="text" name="ENGINESIZE" placeholder="Tamaño del motor (> 0) eg. 3.5 litros"><br>
+
+                <input class="form-input" type="text" name="CYLINDERS" placeholder="Cilindros eg. 6.0 cilindros"><br>
+
+                <input class="form-input" type="text" name="FUELCONSUMPTION_COMB" placeholder="Consumo combinado de combustible eg. 11.0 Litros/100 KM"><br><br>
+                <input type="submit" class="myButton" value="Predecir emisión CO2">
+            </form>
+        </div>        
+    </div>
+
+    <footer
+        style="position: fixed; bottom: 0; width: 100%;background-color: black;color: ivory;text-align: center;padding-top: 5px;padding-bottom: 5px;">
+        <a href="https://portal.edu.gva.es/cefirexativa/es/inicio/"
+		class="navbar-brand" style="color: #ff6b00;">
+            <i class="fas fa-university"></i> CEFIRE
+        </a>
+    </footer>
+</body>
+</html>

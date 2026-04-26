@@ -1,0 +1,15 @@
+Si tenias un entorno de anacoda antiguo puede que tengas algun problema de incompatiblidad, por ello es recomendable crear un entorno limpio y utilizar el notebook con este entorno nuevo. Los pasos para ello son:
+
+# 1. Crea un entorno limpio con Python moderno
+conda create -n ml python=3.11 -y
+
+# 2. Actívalo
+conda activate ml
+
+# 3. Instala el stack de ML de una vez (conda resuelve todo desde cero sin inconsistencias)
+conda install numpy pandas matplotlib seaborn scikit-learn jupyter notebook ipykernel -y
+
+# 4. Registra el entorno como kernel de Jupyter
+python -m ipykernel install --user --name ml --display-name "Python 3.11 (ML)"
+
+Luego en Jupyter seleccionas el kernel "Python 3.11 (ML)" y tu celda funcionará sin warnings.
